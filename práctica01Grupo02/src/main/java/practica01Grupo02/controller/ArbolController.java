@@ -16,28 +16,28 @@ public class ArbolController {
     @Autowired
     private ArbolService arbolService;
 
-    @GetMapping("categoria/listar")
+    @GetMapping("/listar")
     public String listarArboles(Model model) {
         List<Arbol> arboles = arbolService.getArboles(true);
         model.addAttribute("arboles", arboles);
-        return "listarArboles"; // Redirige a listarArboles.html
+        return "Arbol/Listar"; // Asegura que Listar.html está en templates/Arbol/
     }
 
     @GetMapping("/nuevo")
     public String nuevoArbol(Model model) {
         model.addAttribute("arbol", new Arbol());
-        return "formArbol";
+        return "Arbol/formArbol"; // Este archivo también debe estar en templates/Arbol/
     }
 
     @PostMapping("/guardar")
     public String guardarArbol(@ModelAttribute Arbol arbol) {
         arbolService.save(arbol);
-        return "redirect:/arboles/";
+        return "redirect:/Arbol/listar";
     }
 
     @GetMapping("/eliminar/{id}")
     public String eliminarArbol(@PathVariable Long id) {
         arbolService.delete(id);
-        return "redirect:/arboles/";
+        return "redirect:/Arbol/listar";
     }
 }
