@@ -10,13 +10,13 @@ import practica01Grupo02.service.ArbolService;
 import java.util.List;
 
 @Controller
-@RequestMapping("/arboles")
+@RequestMapping("/Arbol")
 public class ArbolController {
 
     @Autowired
     private ArbolService arbolService;
 
-    @GetMapping("/")
+    @GetMapping("categoria/listar")
     public String listarArboles(Model model) {
         List<Arbol> arboles = arbolService.getArboles(true);
         model.addAttribute("arboles", arboles);
