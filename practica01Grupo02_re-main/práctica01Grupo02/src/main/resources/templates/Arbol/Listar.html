@@ -1,13 +1,13 @@
 0 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
-    <head th:replace="~{../../layout/plantilla :: head}">
+    <head th:replace="~{layout/plantilla :: head}">
         <title>Finca2</title>
     </head>
 
     <body class="bg-dark text-white">
 
-        <header th:replace="~{../../layout/plantilla :: header}"/>
+        <header th:replace="~{layout/plantilla :: header}"/>
             
             <div th:fragment="content">
                 <h1 class="text-white">Lista de Árboles</h1>
@@ -40,7 +40,7 @@
             </div>
             
 
-        <footer th:replace="~{../../layout/plantilla :: footer}"/>         
+        <footer th:replace="~{layout/plantilla :: footer}"/>         
       
     </body>
 </html>
