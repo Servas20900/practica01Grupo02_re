@@ -1,46 +1,25 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml">
     <head th:replace="~{layout/plantilla :: head}">
-        <title>Finca2</title>
+        <title>Arbol</title>        
     </head>
-
-    <body class="bg-dark text-white">
-
+    <body>
         <header th:replace="~{layout/plantilla :: header}"/>
-            
-            <div th:fragment="content">
-                <h1 class="text-white">Lista de Árboles</h1>
-                <table class="table table-dark">
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Nombre Común</th>
-                            <th>Tipo de Flor</th>
-                            <th>Dureza de Madera</th>
-                            <th>Altura Promedio</th>
-                            <th>Activo</th>
-                            <th>Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr th:each="arbol : ${arboles}">
-                            <td th:text="${arbol.id_arbol}"></td>
-                            <td th:text="${arbol.nombre_comun}"></td>
-                            <td th:text="${arbol.tipo_flor}"></td>
-                            <td th:text="${arbol.dureza_madera}"></td>
-                            <td th:text="${arbol.altura_promedio}"></td>
-                            <td th:text="${arbol.activo} ? 'Sí' : 'No'"></td>
-                            <td>
-                                <a th:href="@{/Arbol/eliminar/{id}(id=${arbol.id_arbol})}" class="btn btn-danger">Eliminar</a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            
+        <br>
+        <p>
 
-        <footer th:replace="~{layout/plantilla :: footer}"/>         
-      
+            En esta tarea, los estudiantes deben realizar una práctica que implica la creación y gestión de una base de datos en MySQL, junto con el desarrollo de un proyecto basado en Spring Boot.
+            La tarea se divide en varias partes: en la primera parte, se debe crear una base de datos llamada "práctica" con una tabla llamada "arbol" que contenga al menos cinco columnas,
+            incluyendo una clave primaria autoincrementada y un campo para almacenar la ruta de la imagen del árbol.
+            Además, se debe crear un usuario con acceso a la base de datos. En la segunda parte, se debe desarrollar un proyecto Spring Boot llamado "práctica01" utilizando Bootstrap para la interfaz. 
+            La tercera parte implica configurar la conexión a la base de datos,
+            ajustar el puerto del servidor web y configurar los mensajes de la consola. En la cuarta parte, se deben implementar las operaciones CRUD (Crear, Leer, Actualizar, Eliminar) para gestionar los registros de árboles, 
+            siguiendo la arquitectura MVC. Finalmente, en la quinta parte, se debe utilizar plantillas para los encabezados y pies de página. 
+            La entrega consiste en un archivo ZIP con el proyecto completo, excluyendo la carpeta "target", que debe ser subido al campus virtual.
+
+        </p>
+        <br>
+        <footer th:replace="~{layout/plantilla :: footer}"/>          
     </body>
 </html>
