@@ -20,16 +20,14 @@ public class Arbol implements Serializable {
     private String tipoFlor;
     private String durezaMadera;
     private String rutaImagen;
-    private boolean activo;
     
     public Arbol() {
     }
     
-    public Arbol(String nombreComun, String tipoFlor, String durezaMadera, String rutaImagen, boolean activo) {
+    public Arbol(String nombreComun, String tipoFlor, String durezaMadera, String rutaImagen) {
         this.nombreComun = nombreComun;
         this.tipoFlor = tipoFlor;
         this.durezaMadera = durezaMadera;
         this.rutaImagen = rutaImagen;
-        this.activo = activo;
     }
 }
