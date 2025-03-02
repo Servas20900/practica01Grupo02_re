@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="~{layout/plantilla :: head}">
+        <title>Arbol</title>
+    </head>
+    <body>
+        <header th:replace="~{layout/plantilla :: header}"/>
+
+        <div class="container mt-4 text-center">
+            <h1>Bienvenido al Sistema de Gestión de Árboles</h1>
+            <p>Este sistema permite administrar información sobre distintos tipos de árboles.</p>
+            <a th:href="@{/arbol/listado}" class="btn btn-primary">Ver Árboles</a>
+        </div>
+
+        <footer th:replace="~{layout/plantilla :: footer}"/>
+    </body>
+</html>
