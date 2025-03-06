@@ -18,7 +18,7 @@ public class ArbolController {
     private ArbolService arbolService ;
 
     @GetMapping("/listado")
-    public String listarMedicamentos(Model model) {
+    public String listarArboles (Model model) {
         var arboles = arbolService.getArboles();
         model.addAttribute("arboles", arboles);
         model.addAttribute("totalarboles", arboles.size());
